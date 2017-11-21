@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head> 
+    	<meta charset="UTF-8">
+    	<meta http-equiv="Content-Type" content="text/html">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+		<!-- Website Font style -->
+	    <link rel="stylesheet" href="assets/css/font-awesome.css">
+
+		<title>Bon Profit - Login</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row main">
+				<div class="panel-heading">
+	               <div class="panel-title text-center">
+	               		<h1 class="title">BON PROFIT</h1>
+	               		<hr />
+	               	</div>
+	            </div> 
+				<div class="main-login main-center">
+					<form class="form-horizontal" method="post" action="signup.html">
+
+						<div class="form-group ">
+							<button type="button" class="btn btn-lg btn-block login-button-facebook">Facebook</button>
+						</div>
+
+						<div class="form-group ">
+							<button type="button" class="btn btn-lg btn-block login-button-google">Google +</button>
+						</div>
+						
+						<div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">usuari</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="name"  required="true" id="name" />
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<label for="password" class="cols-sm-2 control-label">contrasenya</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" required="true" name="password" id="password"  />
+								</div>
+							</div>
+						</div>
+						
+
+						<div class="form-group ">
+							<button type="button" class="btn btn-primary btn-lg btn-block login-button">ENTRAR</button>
+						</div>
+						<div class="form-group ">
+							<a href="signup.html"><button type="button" class="btn btn-default btn-lg btn-block login-button">Dòna't d'alta</button></a>
+						</div>
+						<div class="login-register">
+				            <a href="login.html">Has oblidat la teva contrasenya?</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+		<script type="text/javascript" src="assets/js/bootstrap.js"></script>
+	</body>
+</html>
