@@ -31,6 +31,11 @@
     border-right: 1px solid #e7e7e7;
 }*/
 
+#map 
+{ 
+  border: 1px solid black;
+}
+
 .side-menu
 {
     position: fixed;
@@ -208,6 +213,11 @@
     border-radius: 0;
     background-color: #f3f3f3;
 }
+
+.pre-scrollable {
+    max-height: 750px;
+    overflow-y: scroll;
+}
 /* Main body section */
 .side-body
 {
@@ -348,6 +358,14 @@
 
         -webkit-transform-style: preserve-3d;
                 transform-style: preserve-3d;
+    }
+
+    .side-menu-container > .navbar-nav > li {
+      padding: 16px;
+    }
+
+    .side-menu-container > .navbar-nav > div{
+      padding: 16px;
     }
     /* Uncomment for scrollable menu -> see top comment */
     /*.absolute-wrapper{
