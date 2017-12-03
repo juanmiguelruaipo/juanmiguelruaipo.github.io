@@ -10,10 +10,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/sidebar.css">
     <!-- Website Font style -->
     <link rel="stylesheet" href="https://openlayers.org/en/v4.5.0/css/ol.css" type="text/css">
-
-     <style>
-      
-    </style>
+    <!-- Website Font style -->
+    <link rel="stylesheet" href="assets/css/font-awesome.css">
     
     <script src="https://openlayers.org/en/v4.5.0/build/ol.js" type="text/javascript"></script>
     <title>Bon Profit - Hora de menjar</title>
@@ -50,83 +48,84 @@
 
     <!-- Main Menu -->
                         <div class="side-menu-container pre-scrollable">
-                            <ul class="nav navbar-nav">
-
+                            <ul class="nav navbar-nav" style="margin-left: 10px">
                                 <!-- adress -->
                                 <li>
                                     <a href="#"><i class="fa fa-map-marker fa-lg" aria-hidden="true"></i> Adreça</a>
                                     <input type="text" class="form-control" name="name" required="true" id="name" />
                                 </li>
-
                                 <!-- mitjà de transport -->
-                                <li>
+                                <li >
                                     <a href="#"><i class="fa fa-bus fa-lg" aria-hidden="true"></i> Mitjà de transport</a>
-                                    
-
                                     <div class="radio">
-                                      <label><input type="radio" name="mitja-transport">Caminant</label>
+                                        <label>
+                                            <input type="radio" name="mitja-transport">Caminant</label>
                                     </div>
                                     <div class="radio">
-                                      <label><input type="radio" name="mitja-transport">Tranport públic</label>
+                                        <label>
+                                            <input type="radio" name="mitja-transport">Tranport públic</label>
                                     </div>
                                     <div class="radio disabled">
-                                      <label><input type="radio" name="mitja-transport" >Cotxe</label>
+                                        <label>
+                                            <input type="radio" name="mitja-transport">Cotxe</label>
                                     </div>
-
                                 </li>
-
                                 <!-- Tipus de menjar -->
                                 <li>
                                     <a href="#"><i class="fa fa-cutlery fa-lg" aria-hidden="true"></i> Tipus de menjar</a>
                                     <div class="radio">
-                                      <label><input type="radio" name="tipus-menjar">Desdejuni</label>
+                                        <label>
+                                            <input type="radio" name="tipus-menjar">Desdejuni</label>
                                     </div>
                                     <div class="radio">
-                                      <label><input type="radio" name="tipus-menjar">Esmorzar</label>
+                                        <label>
+                                            <input type="radio" name="tipus-menjar">Esmorzar</label>
                                     </div>
                                     <div class="radio disabled">
-                                      <label><input type="radio" name="tipus-menjar" >Menjar</label>
+                                        <label>
+                                            <input type="radio" name="tipus-menjar">Menjar</label>
                                     </div>
                                     <div class="radio disabled">
-                                      <label><input type="radio" name="tipus-menjar" >Sopar</label>
+                                        <label>
+                                            <input type="radio" name="tipus-menjar">Sopar</label>
                                     </div>
                                 </li>
-
-                                 <!-- Franja horaria -->
+                                <!-- Franja horaria -->
                                 <li>
                                     <a href="#"><i class="fa fa-cutlery fa-lg" aria-hidden="true"></i> Franja horària</a>
                                     <div class="checkbox">
-                                      <label><input type="checkbox" value="">Matí</label>
+                                        <label>
+                                            <input type="checkbox" value="">Matí</label>
                                     </div>
                                     <div class="checkbox">
-                                      <label><input type="checkbox" value="">Tarda</label>
+                                        <label>
+                                            <input type="checkbox" value="">Tarda</label>
                                     </div>
                                     <div class="checkbox ">
-                                      <label><input type="checkbox" value="" >Nit</label>
+                                        <label>
+                                            <input type="checkbox" value="">Nit</label>
                                     </div>
                                 </li>
-
                                 <!-- Ordenar per -->
                                 <li>
                                     <a href="#"><i class="fa fa-cutlery fa-lg" aria-hidden="true"></i> Ordenar per</a>
                                     <div class="radio">
-                                      <label><input type="radio" name="ordenar-per">Més a prop</label>
+                                        <label>
+                                            <input type="radio" name="ordenar-per">Més a prop</label>
                                     </div>
                                     <div class="radio">
-                                      <label><input type="radio" name="ordenar-per">Més valorat</label>
+                                        <label>
+                                            <input type="radio" name="ordenar-per">Més valorat</label>
                                     </div>
                                     <div class="radio disabled">
-                                      <label><input type="radio" name="ordenar-per" >Preu més baix</label>
+                                        <label>
+                                            <input type="radio" name="ordenar-per">Preu més baix</label>
                                     </div>
                                 </li>
-
                                 <!-- Cercar -->
                                 <li>
                                     <button type="button" class="btn btn-primary btn-lg btn-block login-button" data-toggle="modal" data-target="#myModal">Cercar</button>
                                 </li>
-
-
-                              
                             </ul>
                         </div>
                         <!-- /.navbar-collapse -->
@@ -135,63 +134,243 @@
             <!-- Main Content -->
             <div class="container-fluid">
                 <div class="side-body">
-                     <div id="map"></div>
+                    <div id="map"></div>
                 </div>
             </div>
-
             <!-- Modal content-->
             <div id="myModal" class="modal fade" role="dialog">
-                  <div class="modal-dialog">
-
-                    
+                <div class="modal-dialog modal-lg">
                     <div class="modal-content">
-                      <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                        <h4 class="modal-title">Modal Header</h4>
-                      </div>
-                      <div class="modal-body">
-                        <p>Some text in the modal.</p>
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                      </div>
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title">Restaurant Cal Pep</h2>
+                        </div>
+                        <div class="modal-body">
+
+                            <div class="row">
+                            <div class="col-md-10">
+                                <div class="row dialog-section">
+                                    <div class="col-md-4">
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star" aria-hidden="true"></i>
+                                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                        Carrer Aribau 10, Barcelona
+                                    </div>
+                                    <div class="col-md-4">
+                                        <i class="fa fa-phone" aria-hidden="true"></i>
+                                        999-090-999
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row dialog-section">
+                                <div class="col-md-12">
+                                    <img src="assets/images/restaurant_3.jpg" idth="140" height="140" alt="..." class="img-rounded">
+                                    <img src="assets/images/restaurant_4.jpg" idth="140" height="140" alt="..." class="img-rounded">
+                                    <img src="assets/images/restaurant_5.jpg" idth="140" height="140" alt="..." class="img-rounded">
+                                    <img src="assets/images/restaurant_6.jpg" idth="140" height="140" alt="..." class="img-rounded">
+                                </div>
+                            </div>
+
+                            <div class="row dialog-section">
+                                <div class="col-md-8">
+                                    <div class="row dialog-sub-section">
+                                        <div class="col-md-4">
+                                            <i class="fa fa-calendar" aria-hidden="true" ></i>
+                                            <label  class="control-label">Franja Horària:</label>
+                                        </div>
+                                        <div class="col-md-8">Tots els dies de 09:00h a 22:00h</div>
+                                        
+                                    </div>
+                                    <div class="row dialog-sub-section">
+                                        <div class="col-md-4">
+                                            <i class="fa fa-sticky-note-o" aria-hidden="true"></i>
+                                            <label  class="control-label">Descripció breu:</label>
+                                        </div>
+                                        <div class="col-md-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  </div>
+                                    </div>
+                                    <div class="row dialog-sub-section">
+                                        <div class="col-md-4">
+                                            <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                            <label  class="control-label">Com arribar:</label>
+                                        </div>
+                                        <div class="col-md-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.  </div>
+                                    </div>
+                                    <div class="row dialog-sub-section">
+                                        <div class="col-md-4">
+                                            <i class="fa fa-cutlery" aria-hidden="true"></i>
+                                            <label  class="control-label">Tipus de menjar:</label>
+                                        </div>
+                                        <div class="col-md-8">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.  </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <label  class="control-label">Ubicació</label>
+                                            <img src="assets/images/ubicacio_maps.jpg" idth="140" height="140" alt="..." class="img-rounded">
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            <div class="row dialog-section">
+                                <div class="col-md-12">
+                                    <h4 style="font-weight: 800">Comentaris:</h4>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="row">
+                                        <div class="col-md-3" style="font-size: 9px; font-style: italic;">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                                        </div>
+                                         <div class="col-md-3" style="font-size: 9px; font-style: italic;">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                                        </div>
+                                         <div class="col-md-3" style="font-size: 9px; font-style: italic;">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                                        </div>
+                                         <div class="col-md-3" style="font-size: 9px; font-style: italic;">
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. 
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                        </div>
                     </div>
-
-                  </div>
+                </div>
             </div>
-
-    </div>
+            </div>
             <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
             <script type="text/javascript" src="assets/js/bootstrap.js"></script>
-            
+            <script type="text/javascript">
 
-          <script type="text/javascript">
-            var attribution = new ol.control.Attribution({
-                collapsible: false
+                var dotColorRed = new ol.style.Icon(({
+                  color: [255, 0, 0],
+                  crossOrigin: 'anonymous',
+                  src: 'assets/images/dot.png'
+                }));
+
+                var dotColorGreen = new ol.style.Icon(({
+                  color: [113, 140, 0],
+                  crossOrigin: 'anonymous',
+                  src: 'assets/images/dot.png'
+                }));
+
+
+
+               var sants = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1375, 41.380222]))
               });
-          var map = new ol.Map({
-            controls: ol.control.defaults({attribution: false}).extend([attribution]),
-            target: 'map',
-            layers: [
-              new ol.layer.Tile({
-                source: new ol.source.OSM()
-              })
-            ],
-            view: new ol.View({
-              center: ol.proj.transform(
-              [2.1375, 41.380222], 'EPSG:4326', 'EPSG:3857'),
-              zoom: 15
-            })
-          });
+               sants.setStyle(new ol.style.Style({
+                image: dotColorGreen,
+              }));
 
-          function checkSize() {
-            var small = map.getSize()[0] < 600;
-            attribution.setCollapsible(small);
-            attribution.setCollapsed(small);
-          }
+               var santsRed = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1385, 41.380122]))
+              });
+               santsRed.setStyle(new ol.style.Style({
+                image: dotColorRed,
+              }));
 
-      window.addEventListener('resize', checkSize);
-        </script>
+
+               var santsRed2 = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1385, 41.375122]))
+              });
+               santsRed2.setStyle(new ol.style.Style({
+                image: dotColorRed,
+              }));
+
+               var santsRed3 = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1405, 41.376122]))
+              });
+               santsRed3.setStyle(new ol.style.Style({
+                image: dotColorRed,
+              }));
+
+               var espanyaRed1 = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1485, 41.375122]))
+              });
+               espanyaRed1.setStyle(new ol.style.Style({
+                image: dotColorRed,
+              }));
+               var espanyaGreen1 = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1495, 41.379122]))
+              });
+               espanyaGreen1.setStyle(new ol.style.Style({
+                image: dotColorGreen,
+              }));
+               var espanyaGreen2 = new ol.Feature({
+                geometry: new ol.geom.Point(ol.proj.fromLonLat([2.1500, 41.380122]))
+              });
+               espanyaGreen2.setStyle(new ol.style.Style({
+                image: dotColorGreen,
+              }));
+
+
+               var vectorSource = new ol.source.Vector({
+                features: [sants, santsRed,santsRed2, santsRed3, espanyaRed1, espanyaGreen1, espanyaGreen2]
+              });
+
+              var vectorLayer = new ol.layer.Vector({
+                source: vectorSource
+              });
+
+              var rasterLayer = new ol.layer.Tile({
+                source: new ol.source.TileJSON({
+                  url: 'https://api.tiles.mapbox.com/v3/mapbox.geography-class.json?secure',
+                  crossOrigin: ''
+                })
+              });
+
+
+
+                var attribution = new ol.control.Attribution({
+                    collapsible: false
+                });
+                var map = new ol.Map({
+                    controls: ol.control.defaults({ attribution: false }).extend([attribution]),
+                    target: 'map',
+                    layers: [
+                        new ol.layer.Tile({
+                            source: new ol.source.OSM()
+                        }),vectorLayer
+                    ],
+                    view: new ol.View({
+                        center: ol.proj.transform(
+                            [2.1375, 41.380222], 'EPSG:4326', 'EPSG:3857'),
+                        zoom: 15
+                    })
+                });
+
+                map.on('click', function(evt) {
+                    var feature = map.forEachFeatureAtPixel(evt.pixel,
+                        function(feature) {
+                          return feature;
+                        });
+                    if (feature) {
+                      $("#myModal").modal();
+                    }
+                  });
+
+                function checkSize() {
+                    var small = map.getSize()[0] < 600;
+                    attribution.setCollapsible(small);
+                    attribution.setCollapsed(small);
+                }
+
+                window.addEventListener('resize', checkSize);
+            </script>
 </body>
 
 </html>

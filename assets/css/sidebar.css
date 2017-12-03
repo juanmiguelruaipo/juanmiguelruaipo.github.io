@@ -7,6 +7,13 @@
     margin-right: 0;
     margin-left: 0;
 }
+
+.dialog-section{
+  margin: 10px 0 20px 0;
+}
+.dialog-sub-section{
+  margin-bottom: 10px;
+}
 /* 
     Sometimes the sub menus get too large for the page and prevent the menu from scrolling, limiting functionality
     A quick fix is to change .side-menu to 
@@ -34,6 +41,12 @@
 #map 
 { 
   border: 1px solid black;
+}
+
+body,
+html
+{
+    font-family: 'Oxygen', sans-serif;
 }
 
 .side-menu
